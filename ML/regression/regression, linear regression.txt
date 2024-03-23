@@ -1,0 +1,75 @@
+regression
+------------
+regression is a statistical method to understand the relationship between two or more variables.
+there are 3 types of regressions
+
+they are 
+1.linear-->predictive model to 	predict the linear 	relationship b/w the variables
+2.polynomial
+3.logistic
+
+1.linear:
+---------
+	a.single linear regression->only single dependent and independent values
+	ex:age-independent,premium-dependent
+	b.multiple linear regression-> single dependent values and multiple independent values
+	ex:house price prediction
+	area,no.of bedrooms,age-->independent values.
+	price of the house-->dependent value
+* here we will be importing seaborn as sns package
+
+code for prediction
+import pandas as pd
+var1=pd.DataFrame({"age":[25,30,35,40,45],"premium":[18000,32000,42000,47000,55000]})
+
+
+->import sklearn.linear_model import LinearRegression
+
+#we will also use "sklearn.linear_model" package by importing "LinearRegression" we will be predicting the values.
+
+->linear_model=LinearRegression()
+
+#linear_reg_model=LinearRegression() [we will be using same name as method(LinearRegression())]
+#now we are going to train our linear_model to predict the values.
+#for training the model we use "fit" followed by column names
+
+->linear_model.fit(var1[["age"]],var1[["premium"]])
+
+# now our linear_model is ready to predict the values
+#for testing the linear model we will use the below line of code by passing age as parameter.
+
+->linear_model.predict([[32]])
+# gives the predicted premium value for age 32.
+
+#the whole prediction is done based on straight line formula that is (y=mx+c)
+where y= value to be predicted that is premium
+      m= co-efficient
+      x=age that is input value
+      c=intercept
+#to find co-efficient value we should use the below line
+->linear_model.coef_
+#to find intercept value we should use the below line
+->linear_model.intercept_
+->x refers to age
+->y refers to premium
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

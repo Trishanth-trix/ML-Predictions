@@ -1,0 +1,49 @@
+data visualization
+-------------------
+we are going to use 2 packages 
+1.importing seaborn as sns
+2.importing matplotlib.pyplot as plt
+
+it is nothing but it gives ploted points in a graph by using sum functions like 
+1.sns.lineplot(x=""col_1",y="col2",dada=x)
+where x  is x axis,
+      y is y axis.
+it gives graph with names in it
+2.plt.plot(col1,col2)
+it gives only graph with out any names in it
+to get lables we use 
+a.plt.xlable("student roll")(x-axis name)
+b.plt.ylable("student marks")(y-axis name)
+
+bar graph
+---------
+plt.bar(col1,col2)
+plt.xlable("student roll")
+plt.ylable("student marks")
+plt.show()
+op:
+bar graph
+
+changing the color of the each bar
+
+c=['r','g','b','g','r','y']
+plt.bar(col1,col2,color=c,width=0.3)
+plt.show()
+# we can pass even more parameters into that plt.bar() function.
+op:
+bar1=red,bar2=green,....,bar6=yellow.
+
+changing the plotting shape:
+-----------------------------
+plt.scatter(col1,col2,marker="*")
+plt.scatter(col1,col2,marker=".")
+plt.scatter(col1,col2,marker=",") 
+
+pie chart
+----------
+plt.pie(col1)
+
+
+
+
+

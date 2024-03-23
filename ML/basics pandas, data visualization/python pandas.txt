@@ -1,0 +1,44 @@
+python pandas:
+-------------
+
+to read file:
+variable_name= package_name.read_csv("file location path")
+
+to fill the empty records with value :
+variablename.fillna("some thing to fill")
+
+to fill null values with the most appropreate values we use
+variable_name.interpolate()
+
+joining the 2 different data frames:
+var1=pd.DataFrame("col1":[1,2,3],"col2":[1,2,3]
+var2=pd.DataFrame("col1":[1,2,3],"col3":[11,22,33]
+var3=pd.merge(var1,var2,on="col1")
+here "on" is the common coloumn should be mentioned
+op:
+col1 || col2 || col3
+---------------------
+ 1 || 1 || 11
+ 2 || 2 || 22
+ 3 || 3 || 33
+
+if we want to add 1 column values to another column
+var3["sum"]=var3[col2]+var3[col3]
+op:
+new col will be added to the previous op named as sum and
+values in col2 and col3 are added to geather. 
+
+if we want to compare greater or less than value then 
+
+var3=var3[col1] > var3[sum]
+var3=var3[col1] < var3[sum]
+var3=var3[col1] != var3[sum]
+op:
+op will give true or false in the record. 
+col1 || col2 || col3|| sum     || greater      || smaller|| etc..
+---------------------------------------------------------
+ 1   || 1    || 11  || 1+11=12 || 1 > 12= False|| True   ||
+ 2   || 2    || 22  || 2+22=24 || 2 > 24= False|| True   ||
+ 3   || 3    || 33  || 3+33=36 || 3 > 36= False|| True   ||
+
+
